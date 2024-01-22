@@ -1,0 +1,3 @@
+error_log
+/admin/error_log
+/log/sql_errors.log

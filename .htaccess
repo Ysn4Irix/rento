@@ -1,0 +1,13 @@
+ErrorDocument 404 /errors/404page.html
+ErrorDocument 403 /errors/403page.html
+ErrorDocument 500 /errors/500page.html
+
+
+Options -Indexes
+
+php_value date.timezone 'Europe/London'
+
+RewriteEngine on
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.php -f
+RewriteRule ^(.*)$ $1.php [NC,L]
